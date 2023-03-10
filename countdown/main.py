@@ -4,6 +4,8 @@ import datetime
 import os
 from dotenv import load_dotenv
 
+print('EXECUTANDO')
+
 load_dotenv()
 
 api = tweepy.Client(
