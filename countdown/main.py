@@ -1,16 +1,19 @@
 import time
 import tweepy
-from keys import consumer_key, consumer_secret, access_token, access_token_secret
 import datetime
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 api = tweepy.Client(
-    consumer_key=consumer_key,
-    consumer_secret=consumer_secret,
-    access_token=access_token,
-    access_token_secret=access_token_secret
+    consumer_key= os.environ.get('API_KEY'),
+    consumer_secret= os.environ.get('API_SECRET_KEY'),
+    access_token= os.environ.get('ACCESS_TOKEN'),
+    access_token_secret= os.environ.get('ACCESS_TOKEN_SECRET')
 )
 
-hora_execucao = "03:00"
+hora_execucao = "11:00"
 
 while True:
     hora_atual = datetime.datetime.now().strftime("%H:%M")
