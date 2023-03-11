@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime
 
 class Circuito:
     def __init__(self, nome, data):
@@ -34,6 +34,14 @@ list.append(Circuito("do Brasil - 🇧🇷", date(2023,11,3)))
 list.append(Circuito("dos Estados Unidos - 🇺🇸", date(2023,11,16)))
 list.append(Circuito("de Abu Dhabi - 🇺🇸", date(2023,11,24)))
 
+def retornaGrandPrixMaisProximo():
+    hoje = date.today()
 
-for circuito in list:
-    print("Circuito",circuito.nome + " /// Dia:", circuito.data, sep=' ')
+    for circuito in list:
+            if((circuito.data-hoje).days<0):
+                list.remove(circuito)    
+
+    if((list[0].data - hoje).days == 1):
+        return(f"Falta {(list[0].data - hoje).days} dia para o Grande prêmio {list[0].nome}")    
+    else:    
+        return(f"Faltam {(list[0].data - hoje).days} dias para o Grande prêmio {list[0].nome}")
