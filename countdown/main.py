@@ -15,7 +15,7 @@ api = tweepy.Client(
     access_token_secret= os.environ.get('ACCESS_TOKEN_SECRET')
 )
 
-hora_execucao = "11:00"
+hora_execucao = "19:18"
 
 while True:
     hora_atual = datetime.datetime.now().strftime("%H:%M")
@@ -28,3 +28,4 @@ while True:
         except Exception as e:
             print('Erro: ',e)
     time.sleep(60)
+
