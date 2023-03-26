@@ -51,7 +51,3 @@ def removeCircuitosPassados():
     hoje = date.today()
     global listaDeCircuitos
     listaDeCircuitos = [circuito for circuito in listaDeCircuitos if (circuito.data - hoje).days >= 0]
-
-proximoGrandPrix = retornaGrandPrixMaisProximo()
-
-print (proximoGrandPrix)
