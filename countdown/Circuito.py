@@ -33,7 +33,7 @@ listaDeCircuitos.append(Circuito("do México - 🇲🇽", date(2023,10,27)))
 listaDeCircuitos.append(Circuito("do Brasil - 🇧🇷", date(2023,11,3)))
 listaDeCircuitos.append(Circuito("dos Estados Unidos - 🇺🇸", date(2023,11,16)))
 listaDeCircuitos.append(Circuito("de Abu Dhabi - 🇺🇸", date(2023,11,24)))
-
+listaDeCircuitos.append(Circuito("do Barém - 🇧🇭", date(2024,02,29)))
 
 def retornaGrandPrixMaisProximo():
     hoje = date.today()
