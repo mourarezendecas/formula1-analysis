@@ -23,7 +23,7 @@ def retornaGrandPrixMaisProximo():
     if((listaDeCircuitos[0].data - hoje).days == 1):
         return(f"Falta {(listaDeCircuitos[0].data - hoje).days} dia para o Grande prêmio {listaDeCircuitos[0].nome}")
     elif((listaDeCircuitos[0].data - hoje).days == 0):
-        return(f"Começa hoje o Grande prêmio {listaDeCircuitos[0].nome} ! \n No {listaDeCircuitos[0].circuito}")
+        return(f"Começa hoje o Grande prêmio {listaDeCircuitos[0].nome} ! \nNo {listaDeCircuitos[0].circuito}")
     else:
         return(f"Faltam {(listaDeCircuitos[0].data - hoje).days} dias para o Grande prêmio {listaDeCircuitos[0].nome}")
 
